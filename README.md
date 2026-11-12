@@ -41,11 +41,16 @@
 ## 🚀 Як запустити локально
 
 1. Встановіть [XAMPP](https://www.apachefriends.org/) і запустіть **Apache** та **MySQL**.
-2. Скопіюйте папку проєкту в `C:\xampp\htdocs\shop`.
+2. Завантажте проєкт у папку `htdocs`:
+   ```
+   cd C:\xampp\htdocs
+   git clone https://github.com/kuzmenkoi633-alt/ukrainefood.git
+   ```
+   (або натисніть **Code → Download ZIP** і розпакуйте в `C:\xampp\htdocs\ukrainefood`)
 3. Відкрийте **phpMyAdmin** → вкладка **Імпорт** → виберіть файл `database.sql`.
 4. Скопіюйте `config.example.php` як `config.php` і впишіть свої дані бази
    (для XAMPP за замовчуванням: користувач `root`, пароль порожній).
-5. Відкрийте у браузері: `http://localhost/shop/`
+5. Відкрийте у браузері: `http://localhost/ukrainefood/`
 
 **Демо-вхід:** логін `admin`, пароль `admin123`
 
