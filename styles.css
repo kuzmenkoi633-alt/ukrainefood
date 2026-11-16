@@ -377,3 +377,12 @@ button:hover {
     min-width: 0;
   }
 }
+.product-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+li:has(.status.out) .product-photo {
+  filter: grayscale(1);
+}

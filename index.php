@@ -5,7 +5,7 @@ require_once 'db.php';
 $search = trim((string) ($_GET['search'] ?? ''));
 $categoryId = filter_var($_GET['category'] ?? null, FILTER_VALIDATE_INT) ?: null;
 
-$sql = "SELECT p.id, p.name, p.price, p.quantity, c.name AS category_name
+$sql = "SELECT p.id, p.name, p.price, p.quantity, p.image, c.name AS category_name
         FROM products p
         LEFT JOIN category c ON p.category_id = c.id";
 $params = [];
@@ -51,6 +51,9 @@ require 'header.php';
             $status = $quantity === 0 ? 'Немає в наявності' : "Кількість: {$quantity} шт";
         ?>
             <li>
+                <?php if ($product['image']): ?>
+                    <img class="product-photo" src="<?= htmlspecialchars($product['image']) ?>" alt="<?= htmlspecialchars($product['name']) ?>">
+                <?php endif; ?>
                 <span class="product-name"><?= htmlspecialchars($product['name']) ?></span>
                 <span class="price"><?= number_format((float) $product['price'], 2, '.', ' ') ?> грн</span>
                 <span class="status <?= $quantity === 0 ? 'out' : '' ?>"><?= $status ?></span>
