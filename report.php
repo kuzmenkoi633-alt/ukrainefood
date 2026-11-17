@@ -13,7 +13,7 @@ $lowStock = $pdo->query("SELECT name, quantity FROM products WHERE quantity < 10
 $pageTitle = 'Звіти';
 require 'header.php';
 ?>
-<h1>📊 Звіти</h1>
+<h1>Звіти</h1>
 <a href="index.php" class="back-link">← Назад до товарів</a>
 
 <div class="stats">
@@ -31,7 +31,7 @@ require 'header.php';
     </div>
 </div>
 
-<h2>⚠️ Закінчується (менше 10 шт.)</h2>
+<h2>Закінчується (менше 10 шт.)</h2>
 <?php if (!empty($lowStock)): ?>
     <ul class="low-stock">
         <?php foreach ($lowStock as $item): ?>

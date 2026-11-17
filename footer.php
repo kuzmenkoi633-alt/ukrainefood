@@ -1,6 +1,8 @@
 </main>
 <footer class="site-footer">
-    © 2026 UkraineFood
+    <span>© 2026 UkraineFood · господа комори</span>
+    <a href="#top">Наверх ↑</a>
+    <span>Фото: Wikimedia Commons</span>
 </footer>
 </body>
 

@@ -30,7 +30,7 @@ $pageTitle = 'Додати товар';
 require 'header.php';
 ?>
 <h1>Додати новий товар</h1>
-<a href="index.php">Повернутися до списку товарів</a>
+<a href="index.php" class="back-link">← Повернутися до списку товарів</a>
 
 <?php foreach ($errors as $e): ?>
     <p class="error"><?= htmlspecialchars($e) ?></p>

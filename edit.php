@@ -16,9 +16,9 @@ if (!$product) {
     $pageTitle = 'Товар не знайдено';
     require 'header.php';
 ?>
-    <h1>😕 Товар не знайдено</h1>
+    <h1>Товар не знайдено</h1>
     <p>Можливо, його вже видалили або посилання неправильне.</p>
-    <a href="index.php">← Повернутися до списку товарів</a>
+    <a href="index.php" class="back-link">← Повернутися до списку товарів</a>
 <?php
     require 'footer.php';
     exit;
@@ -52,7 +52,7 @@ $pageTitle = 'Редагувати товар';
 require 'header.php';
 ?>
 <h1>Редагувати товар</h1>
-<a href="index.php">Повернутися до списку товарів</a>
+<a href="index.php" class="back-link">← Повернутися до списку товарів</a>
 
 <?php foreach ($errors as $e): ?>
     <p class="error"><?= htmlspecialchars($e) ?></p>
