@@ -141,6 +141,11 @@ require 'header.php';
                             <input type="hidden" name="id" value="<?= $id ?>">
                             <input type="submit" class="btn-sell" value="Продати" <?= $quantity === 0 ? 'disabled' : '' ?>>
                         </form>
+                        <form method="post" action="cart_add.php">
+                            <?= csrf_field() ?>
+                            <input type="hidden" name="id" value="<?= $id ?>">
+                            <input type="submit" class="btn-cart" value="В кошик" <?= $quantity === 0 ? 'disabled' : '' ?>>
+                        </form>
                         <a href="edit.php?id=<?= $id ?>">Редагувати</a>
                         <form method="post" action="delete.php" onsubmit="return confirm('Видалити товар?')">
                             <?= csrf_field() ?>

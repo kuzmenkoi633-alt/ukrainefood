@@ -130,6 +130,9 @@ a:hover {
     color: var(--on-main);
     outline: none;
   }
+  & input.btn-cart {
+    color: var(--text);
+  }
 }
 .category {
   color: var(--muted);
