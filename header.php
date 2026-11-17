@@ -18,6 +18,7 @@
             <a href="index.php">Товари</a>
             <a href="add.php">Додати товар</a>
             <a href="report.php">Звіти</a>
+            <a href="cart.php">Кошик (<?= (int) array_sum($_SESSION['cart'] ?? []) ?>)</a>
         </nav>
         <div class="user">
             <button type="button" id="theme-toggle" class="theme-switch" title="Змінити тему">
