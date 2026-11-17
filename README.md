@@ -56,7 +56,7 @@
 
 **Телефон**
 
-<img src="screenshots/mobile.png" alt="Мобільна версія, ніч" width="300">
+<img src="screenshots/mobile.png" alt="Мобільна версія, день" width="300"> <img src="screenshots/mobile-dark.png" alt="Мобільна версія, ніч" width="300">
 
 ## 🚀 Як запустити локально
 
