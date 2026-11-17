@@ -88,3 +88,17 @@ VALUES
         'admin',
         '$2y$10$NfSeElTJKLB23.teFQ7MrubNPiLEOTScDK/hu/R6/ozQeZ45Gu9vy'
     );
+-- Додаткові товари (category_id: 1 = Страви, 2 = Напої, 3 = Солодощі)
+INSERT INTO
+    products (name, price, quantity, category_id, image)
+VALUES
+    ('Сало солоне з перцем (300 г)', 135.00, 25, 1, 'images/salo_perets.jpg'),
+    ('Вареники з вишнею (500 г)', 110.00, 8, 1, 'images/varenyky_vyshnia.jpg'),
+    ('Ковбаса домашня (500 г)', 260.00, 15, 1, 'images/kovbasa.jpg'),
+    ('Пампушки з часником (6 шт)', 60.00, 40, 1, 'images/pampushky.jpg'),
+    ('Голубці (500 г)', 125.00, 7, 1, 'images/holubtsi.jpg'),
+    ('Деруни (400 г)', 90.00, 22, 1, 'images/deruny.jpg'),
+    ('Квас хлібний (1 л)', 45.00, 60, 2, 'images/kvas.jpg'),
+    ('Компот вишневий (1 л)', 55.00, 4, 2, 'images/kompot.jpg'),
+    ('Пряник медовий', 35.00, 9, 3, 'images/prianyk.jpg'),
+    ('Варення вишневе (300 г)', 150.00, 12, 3, 'images/varennia_vyshneve.jpg');
