@@ -507,11 +507,11 @@ li:has(.status.out) .product-photo {
   height: 30px;
   padding: 0;
   border-radius: 999px;
-  background-color: var(--main-soft);
-  border: 1px solid var(--border);
+  background-color: transparent;
+  border: 1px solid var(--text);
 }
 .user .theme-switch:hover {
-  background-color: var(--main-soft);
+  background-color: transparent;
   transform: none;
 }
 .knob {
@@ -521,8 +521,8 @@ li:has(.status.out) .product-photo {
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background-color: #ffb300;
-  box-shadow: 0 0 10px #ffb300;
+  background-color: var(--accent);
+  box-shadow: none;
   transition:
     transform 0.45s cubic-bezier(0.68, -0.55, 0.27, 1.55),
     background-color 0.45s,
@@ -531,7 +531,7 @@ li:has(.status.out) .product-photo {
 :root[data-theme="dark"] .knob {
   transform: translateX(26px);
   background-color: transparent;
-  box-shadow: inset -7px -3px 0 0 #f4e9c8;
+  box-shadow: inset -7px -3px 0 0 var(--main);
 }
 
 /* Українська зима: дрібні акценти */
@@ -569,6 +569,8 @@ li:has(.status.out) .product-photo {
   --orb-glow: light-dark(rgba(255, 255, 255, 0.95), rgba(233, 225, 207, 0.18));
   --trail: light-dark(#bfc8ce, #3a3631);
   --warm: #f2a65a;
+  /* вночі світло світліше й прозоріше, щоб на чорній землі не буріло */
+  --glow-color: light-dark(rgba(242, 166, 90, 0.45), rgba(255, 213, 154, 0.3));
 
   position: relative;
   overflow: hidden;
@@ -690,8 +692,14 @@ li:has(.status.out) .product-photo {
   animation: hero-flicker 2.4s ease-in-out infinite;
 }
 .hero-scene .glow {
-  fill: rgba(242, 166, 90, 0.3);
   animation: hero-flicker 2.4s ease-in-out infinite;
+}
+.hero-scene .glow-core {
+  stop-color: var(--glow-color);
+}
+.hero-scene .glow-edge {
+  stop-color: var(--glow-color);
+  stop-opacity: 0;
 }
 .hero-scene .smoke {
   fill: none;

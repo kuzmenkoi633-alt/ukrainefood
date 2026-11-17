@@ -57,7 +57,13 @@ require 'header.php';
         <path class="ground" d="M0 300 L0 250 Q160 225 330 245 Q520 265 800 240 L800 300 Z" />
 
         <!-- хата-мазанка -->
-        <ellipse class="glow" cx="162" cy="246" rx="52" ry="12" />
+        <defs>
+            <radialGradient id="hero-glow">
+                <stop class="glow-core" offset="0" />
+                <stop class="glow-edge" offset="1" />
+            </radialGradient>
+        </defs>
+        <ellipse class="glow" cx="162" cy="246" rx="60" ry="14" fill="url(#hero-glow)" />
         <rect class="wall" x="118" y="212" width="88" height="34" />
         <path class="roof" d="M104 216 Q118 196 162 182 Q206 196 220 216 Z" />
         <path class="snow" d="M112 206 Q130 190 162 180 Q194 190 212 206 Q194 196 162 186 Q130 196 112 206 Z" />

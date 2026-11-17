@@ -68,6 +68,17 @@ CREATE TABLE
         password VARCHAR(255) NOT NULL
     );
 
+CREATE TABLE
+    sales (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        product_id INT NULL,
+        product_name VARCHAR(255) NOT NULL,
+        price DECIMAL(10, 2) NOT NULL,
+        quantity INT NOT NULL DEFAULT 1,
+        sold_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY (product_id) REFERENCES products (id) ON DELETE SET NULL
+    );
+
 -- Демо-адміністратор для локального запуску: логін admin, пароль admin123
 -- (пароль збережено як хеш password_hash; змініть його перед публікацією сайту онлайн)
 INSERT INTO
