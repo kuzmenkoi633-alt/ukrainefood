@@ -459,9 +459,25 @@ button:hover {
     position: static;
   }
   .menu {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
     justify-content: center;
-    gap: 12px;
+    gap: 8px 24px;
+  }
+  .view-toggle {
+    display: none;
+  }
+  .actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    & form,
+    & input[type="submit"] {
+      width: 100%;
+    }
+    & a {
+      text-align: center;
+    }
   }
   h1 {
     font-size: 24px;
