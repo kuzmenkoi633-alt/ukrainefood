@@ -79,6 +79,7 @@ require 'header.php';
 <?php else: ?>
     <p>Продажів ще не було</p>
 <?php endif; ?>
+<a href="sales.php" class="back-link">Вся історія продажів →</a>
 
 <h2>Закінчується (менше 10 шт.)</h2>
 <?php if (!empty($lowStock)): ?>
